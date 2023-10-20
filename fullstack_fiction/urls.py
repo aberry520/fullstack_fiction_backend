@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
-from fullstack_app import views
+from fullstack_fiction.fullstack_app import views
 
 router = routers.DefaultRouter()
 router.register(r'book', views.BookViewSet)

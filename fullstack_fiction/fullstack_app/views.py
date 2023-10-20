@@ -1,8 +1,8 @@
 from rest_framework import viewsets
-from models import Book
-from serializers import BookSerializer
+from .models import Book
+from .serializers import BookSerializer
 
 # Create your views here.
 class BookViewSet(viewsets.ModelViewSet):
-    queryset = Book.objects.all().order_by('-author')
+    queryset = Book.objects.all().order_by('author')
     serializer_class = BookSerializer
